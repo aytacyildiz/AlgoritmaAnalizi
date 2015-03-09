@@ -46,6 +46,7 @@ public class MainClass{
                 numberOfcomparetion++;
                 if(dizi[d] < dizi[min]) min = d;
             }
+            numberOfcomparetion++;
             if(min!=c){
                 numberOfswap++;
                 swap = dizi[c];
