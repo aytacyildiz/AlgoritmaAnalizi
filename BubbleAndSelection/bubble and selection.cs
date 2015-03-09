@@ -10,11 +10,11 @@ public class MainClass{
         
         Random rand = new Random();
         for(int i = 10; i <= 500; i = i + 10){
-            int[] dizi = new int[i];
-            for(int j = 0; j < i; j++) dizi[j] = rand.Next(-500,500);
-            int[] diziForBubble = (int[]) dizi.Clone();
+            int[] diziForSelection = new int[i];
+            for(int j = 0; j < i; j++) diziForSelection[j] = rand.Next(-500,500);
+            int[] diziForBubble = (int[]) diziForSelection.Clone();
+            Selection(diziForSelection);
             Bubble(diziForBubble);
-            Selection(dizi);
         }
         
         
@@ -36,7 +36,7 @@ public class MainClass{
         Console.Write("Bubble N: {0} ", n);
         //for(int i = 0; i < dizi.Length; i++) Console.Write(dizi[i] + " ");
         //Console.Write("\n");
-        Console.WriteLine("numberOfcomparetion: {0}\t numberOfswap:{1} \n",numberOfcomparetion,numberOfswap);
+        Console.Write("numberOfcomparetion: {0}\t numberOfswap:{1} \n",numberOfcomparetion,numberOfswap);
     }
     public static void Selection(int[] dizi){
         int n = dizi.Length, min, swap, numberOfcomparetion = 0, numberOfswap = 0;
@@ -46,7 +46,6 @@ public class MainClass{
                 numberOfcomparetion++;
                 if(dizi[d] < dizi[min]) min = d;
             }
-            numberOfcomparetion++;
             if(min!=c){
                 numberOfswap++;
                 swap = dizi[c];
@@ -55,7 +54,7 @@ public class MainClass{
             }
         }
         // output
-        Console.Write("Selection \t N: {0} ", n);
+        Console.Write("Selection N: {0} ", n);
         //for(int ii = 0; ii < dizi.Length; ii++) Console.Write(dizi[ii] + " ");
         //Console.Write("\n");
         Console.Write("numberOfcomparetion: {0}\t numberOfswap:{1} \n",numberOfcomparetion,numberOfswap);
