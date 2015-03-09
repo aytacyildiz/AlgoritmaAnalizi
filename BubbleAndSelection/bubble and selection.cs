@@ -1,13 +1,13 @@
 using System;
 public class MainClass{
     public static void Main(){
-        
+
         //int[] dizi1 = {5,-1,6,32,-2,41};
         //int[] dizi2 = {5,-1,6,32,-2,41};
-        
+
         //Bubble(dizi1);
         //Selection(dizi2);
-        
+
         Random rand = new Random();
         for(int i = 10; i <= 500; i = i + 10){
             int[] diziForSelection = new int[i];
@@ -16,9 +16,11 @@ public class MainClass{
             Selection(diziForSelection);
             Bubble(diziForBubble);
         }
-        
-        
+
+
     }
+
+    
     public static void Bubble(int[] dizi){
         int n = dizi.Length, swap = 0, numberOfcomparetion = 0, numberOfswap = 0;
         for(int c = 0; c < n - 1; c++){
@@ -38,6 +40,8 @@ public class MainClass{
         //Console.Write("\n");
         Console.Write("numberOfcomparetion: {0}\t numberOfswap:{1} \n",numberOfcomparetion,numberOfswap);
     }
+
+    // Kaynak: https://en.wikipedia.org/wiki/Selection_sort
     public static void Selection(int[] dizi){
         int n = dizi.Length, min, swap, numberOfcomparetion = 0, numberOfswap = 0;
         for(int c = 0; c < n - 1; c++){
