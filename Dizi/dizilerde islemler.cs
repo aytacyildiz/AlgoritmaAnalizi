@@ -5,7 +5,7 @@ namespace DizilerdeIslem
 	{
 		public static void Main (string[] args)
 		{
-			int[] dizi = { 5, -2, 15, 5, -4, 1, 0, 20, -30 };
+			int[] dizi = { 5, -2, 15, 7, -4, 1, 0, 20, -30 };
 
 			// EnBuyuk için deneme
 			Console.WriteLine("En buyuk: {0}", EnBuyuk(dizi));
@@ -13,9 +13,15 @@ namespace DizilerdeIslem
 			// ElemanBul için deneme
 			Console.WriteLine("Dizideki k. eleman için k:");
 			int k = Convert.ToInt32(Console.ReadLine());
-			Console.WriteLine("Dizideki {0}. eleman: {1}",k,ElemanBul(dizi, k));
+			Console.WriteLine("Dizideki {0}. en büyük eleman: {1}",k,ElemanBul(dizi, k));
+
+			// Sırali dizi
+			Array.Sort(dizi);
+			for(int i = 0; i < dizi.Length; i++) Console.Write(dizi[i] + " ");
+			Console.Write("\n");
 
 			// Analizler:
+			/*
 			System.Diagnostics.Stopwatch stopwatch = new System.Diagnostics.Stopwatch();
 			for (int i = 0; i < 2; i++) {
 				for (int n = 10; n < 1000000000; n = n * 10) {
@@ -25,6 +31,7 @@ namespace DizilerdeIslem
 					Console.WriteLine("N: {0} \t Zaman: {1}",n,stopwatch.Elapsed);
 				}
 			}
+			*/
 		}
 
 		// dizideki en büyük elemanı bul
@@ -36,13 +43,24 @@ namespace DizilerdeIslem
 			}
 			return max;
 		}
-		// dizideki k. elemanı bul
+
+		// dizideki k. en büyük elemanı bul
 		static public int ElemanBul(int[] dizi, int k){
-			int eleman = 0;
-			for (int i = 1; i <= k; i++) {
-				eleman = dizi[i - 1];
+			// diziyi sırala
+			// Kaynak: https://en.wikipedia.org/wiki/Selection_sort
+			int n = dizi.Length, min, swap;
+			for(int c = 0; c < n - 1; c++){
+					min = c;
+					for(int d = c + 1; d < n; d++){
+							if(dizi[d] < dizi[min]) min = d;
+					}
+					if(min!=c){
+							swap = dizi[c];
+							dizi[c] = dizi[min];
+							dizi[min] = swap;
+					}
 			}
-			return eleman;
+			return dizi[n - k];
 		}
 
 		// Analiz için n uzunluklu dizide denemeler
