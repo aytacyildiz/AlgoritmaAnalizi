@@ -16,12 +16,11 @@ namespace DizilerdeIslem
 			Console.WriteLine("Dizideki {0}. en büyük eleman: {1}",k,ElemanBul(dizi, k));
 
 			// Sırali dizi
-			Array.Sort(dizi);
-			for(int i = 0; i < dizi.Length; i++) Console.Write(dizi[i] + " ");
-			Console.Write("\n");
+			//Array.Sort(dizi);
+			//for(int i = 0; i < dizi.Length; i++) Console.Write(dizi[i] + " ");
+			//Console.Write("\n");
 
 			// Analizler:
-			/*
 			System.Diagnostics.Stopwatch stopwatch = new System.Diagnostics.Stopwatch();
 			for (int i = 0; i < 2; i++) {
 				for (int n = 10; n < 1000000000; n = n * 10) {
@@ -31,7 +30,6 @@ namespace DizilerdeIslem
 					Console.WriteLine("N: {0} \t Zaman: {1}",n,stopwatch.Elapsed);
 				}
 			}
-			*/
 		}
 
 		// dizideki en büyük elemanı bul
