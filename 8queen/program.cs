@@ -58,7 +58,7 @@ namespace QueensQuiz{
 		public bool[,] Generate(bool[,] pBoard){
 			// değişken tanımları
 			List<Gecmis> gecmis = new List<Gecmis> ();
-			int c, r, k, t;
+			int c, r, k, t; // c: column r: row
 			// 8 kolonda gez
 			for (c = 0; c < 8; c++) {
 				// tahtayı klonla
@@ -76,7 +76,7 @@ namespace QueensQuiz{
 				for (k = 0; k < 8; k++) {
 					// eski yeri hariç
 					if (k == r) continue;
-					// kolon sayısı kadar eksik vezirli tahtayı klonla
+					// satır sayısı kadar eksik vezirli tahtayı klonla
 					bool[,] gecmisBoard = (bool[,])klonBoard.Clone ();
 					// her bir satıra bir vezir koy
 					gecmisBoard [k, c] = true;
@@ -132,7 +132,7 @@ namespace QueensQuiz{
 				for (j = 0; j < 8; j++) {
 					if(pBoard[j,i] == true) break;
 				}
-				// bulunan vezirin yarattığı tehti sayısını hesapla
+				// bulunan vezirin yarattığı tehtit sayısını hesapla
 				// toplam sonuca ekle
 				sayac += tehtitSayisi(pBoard, j, i);
 			}
