@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 
 namespace MergeSort
 {
@@ -34,7 +33,7 @@ namespace MergeSort
 			Console.WriteLine ();
 		}
 
-		/*
+	/*
 	 * Kaynak
 	 * http://www.softwareandfinance.com/CSharp/MergeSort_Recursive.html
 	*/
