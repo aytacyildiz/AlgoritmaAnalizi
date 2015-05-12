@@ -5,3 +5,5 @@
 * [Bubble ve Selection Sort için eleman karşılaştırma ve yer değiştirme sayısı](/BubbleAndSelection)
 * [Sekiz vezir bulmacasına Hill-Climbing yaklaşımı](/8queen)
 * [Merge Sort](/mergeSort)
+* [Bir dizideki toplamları en büyük olan sıralı alt diziyi bulma fonksiyonu geri dönüş değeri](/MaxSubSumOdev)
+* [Bağlı listede indis operatorü gerçekleştirimi ve aşırı yükleme](/indexOperatoru)
