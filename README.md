@@ -7,3 +7,4 @@
 * [Merge Sort](/mergeSort)
 * [Bir dizideki toplamları en büyük olan sıralı alt diziyi bulma fonksiyonu geri dönüş değeri](/MaxSubSumOdev)
 * [Bağlı listede indis operatorü gerçekleştirimi ve aşırı yükleme](/indexOperatoru)
+* [Basamaklarının küpleri toplamı kendisine eşit olan 3 basamaklı sayılar](/basKupTop)
