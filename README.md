@@ -9,3 +9,4 @@
 * [Bağlı listede indis operatorü gerçekleştirimi ve aşırı yükleme](/indexOperatoru)
 * [Basamaklarının küpleri toplamı kendisine eşit olan 3 basamaklı sayılar](/basKupTop)
 * [Doğrusal özyinemeli arama](/recLinearSearch)
+* [Dinamik boyut değiştiren dizi ile stack gerçekleştirimi ve amortized cost](/amortizedCost)
